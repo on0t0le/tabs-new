@@ -6,11 +6,13 @@ import { MatButtonModule} from '@angular/material/button'
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TabsMainComponent } from './tabs-main/tabs-main.component';
+import { TabContentComponent } from './tab-content/tab-content.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TabsMainComponent
+    TabsMainComponent,
+    TabContentComponent
   ],
   imports: [
     BrowserModule,

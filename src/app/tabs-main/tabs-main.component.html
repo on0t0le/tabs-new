@@ -9,6 +9,8 @@
 <mat-tab-group 
   [selectedIndex]="selectedTabIndex"
   (selectedIndexChange)="selectedTabIndex=$event">
-  <mat-tab *ngFor="let item of tabsObj; let i = index" [label]="item.tab">{{item.content}}</mat-tab>
+  <mat-tab *ngFor="let item of tabsObj; let i = index" [label]="item.tab">
+    <app-tab-content [content]="item.content"></app-tab-content>
+  </mat-tab>
   
 </mat-tab-group>

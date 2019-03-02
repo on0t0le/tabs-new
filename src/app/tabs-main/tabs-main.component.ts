@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class TabsMainComponent {
 
-  selectedTabIndex = 2;
+  selectedTabIndex = 0;
   
   tabsObj = [
     { tab: 'First', content: 'First tab content' },
