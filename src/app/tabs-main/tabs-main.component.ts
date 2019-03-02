@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-tabs-main',
   templateUrl: './tabs-main.component.html',
@@ -7,16 +8,22 @@ import { Component } from '@angular/core';
 })
 export class TabsMainComponent {
 
-  tabs: string[] = [
-    'first',
-    'second',
-    'third'
-  ];
-
-  content: string[] = [
-    'First tab content',
-    'Second tab content',
-    'Third tab content'
+  selectedTabIndex = 2;
+  
+  tabsObj = [
+    { tab: 'First', content: 'First tab content' },
+    { tab: 'Second', content: 'Second tab content' },
+    { tab: 'Third', content: 'Third tab content' }
   ]
 
+  addTab(){
+    this.tabsObj.push(
+      {tab: 'New', content: 'New tab content'});
+    console.log('Adding tab!');
+  }
+
+  deleteTab(index: number){       
+    this.tabsObj.splice(index, 1);
+  }
+  
 }
