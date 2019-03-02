@@ -1,5 +1,4 @@
 <mat-tab-group>
-  <mat-tab label="first">First</mat-tab>
-  <mat-tab label="second">Second</mat-tab>
-  <mat-tab label="third">Third</mat-tab>
+  <mat-tab *ngFor="let item of tabs; let i = index" [label]="item">{{content[i]}}</mat-tab>
+  
 </mat-tab-group>

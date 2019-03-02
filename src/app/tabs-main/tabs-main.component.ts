@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-tabs-main',
   templateUrl: './tabs-main.component.html',
   styleUrls: ['./tabs-main.component.css']
 })
-export class TabsMainComponent implements OnInit {
+export class TabsMainComponent {
 
-  constructor() { }
+  tabs: string[] = [
+    'first',
+    'second',
+    'third'
+  ];
 
-  ngOnInit() {
-  }
+  content: string[] = [
+    'First tab content',
+    'Second tab content',
+    'Third tab content'
+  ]
 
 }
